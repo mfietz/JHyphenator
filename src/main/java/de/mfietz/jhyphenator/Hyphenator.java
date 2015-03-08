@@ -1,13 +1,15 @@
 package de.mfietz.jhyphenator;
 
-import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import org.nustaq.serialization.FSTObjectInput;
 import org.nustaq.serialization.FSTObjectOutput;
 
-import java.io.*;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+
+import java.io.FileInputStream;
 
 /**
  * Hyphenator.java is an adaptation of Mathew Kurian' TextJustify-Android
@@ -142,16 +144,6 @@ public class Hyphenator  {
             result.append(word,i, i + 1);
         }
         return result.toString();
-    }
-
-    public static class TrieNode implements Serializable {
-
-        private static final long serialVersionUID = 1L;
-
-        public TrieNode() {}
-
-        Int2ObjectMap<TrieNode> codePoint = new Int2ObjectArrayMap<TrieNode>();;
-        int[] points;
     }
 
     public static void write(String name, TrieNode t) {
