@@ -1,51 +1,45 @@
 package de.mfietz.jhyphenator;
 
-
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 import org.junit.Test;
-
+import org.junit.runner.RunWith;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(JUnitParamsRunner.class)
 public class HyphenatorTest {
 
     @Test
-    public void testDe() {
+    @Parameters({
+            "Kochschule, Koch-schu-le",
+            "Seewetterdienst, See-wet-ter-dienst",
+            "Hochverrat, Hoch-ver-rat",
+            "Musterbeispiel, Mus-ter-bei-spiel",
+            "Bundespräsident, Bun-des-prä-si-dent",
+            "Schmetterling, Schmet-ter-ling",
+            "Christian, Chris-ti-an"
+    })
+    public void testDe(String input, String expected) {
         HyphenationPattern de = HyphenationPattern.lookup("de");
         Hyphenator h = Hyphenator.getInstance(de);
-
-        String expected = "Koch|schu|le";
-        String actual = StringJoiner.join(h.hyphenate("Kochschule"), "|");
-        assertEquals(expected, actual);
-
-        expected = "See|wet|ter|dienst";
-        actual = StringJoiner.join(h.hyphenate("Seewetterdienst"), "|");
-        assertEquals(expected, actual);
-
-        expected = "Hoch|ver|rat";
-        actual = StringJoiner.join(h.hyphenate("Hochverrat"), "|");
+        String actual = StringJoiner.join(h.hyphenate(input), "-");
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testDeName() {
-        HyphenationPattern de = HyphenationPattern.lookup("de");
-        Hyphenator h = Hyphenator.getInstance(de);
-        String expected = "Chris|ti|an";
-        String actual = StringJoiner.join(h.hyphenate("Christian"), "|");
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testEnUs() {
+    @Parameters({
+            "crocodile, croc-o-dile",
+            "activity, ac-tiv-ity",
+            "potato, po-ta-to",
+            "hyphenation, hy-phen-a-tion",
+            "podcast, pod-cast",
+            "message, mes-sage"
+    })
+    public void testEnUs(String input, String expected) {
         HyphenationPattern us = HyphenationPattern.lookup("en_us");
         Hyphenator h = Hyphenator.getInstance(us);
-
-        String expected = "croc|o|dile";
-        String actual = StringJoiner.join(h.hyphenate("crocodile"), "|");
-        assertEquals(expected, actual);
-
-        expected = "ac|tiv|ity";
-        actual = StringJoiner.join(h.hyphenate("activity"), "|");
+        String actual = StringJoiner.join(h.hyphenate(input), "-");
         assertEquals(expected, actual);
     }
 
