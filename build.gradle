@@ -10,6 +10,5 @@ repositories {
 }
 
 dependencies {
-    compile 'de.ruedigermoeller:fst:2.24'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }

@@ -1,15 +1,7 @@
 package de.mfietz.jhyphenator;
 
-import org.nustaq.serialization.FSTObjectInput;
-import org.nustaq.serialization.FSTObjectOutput;
-
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-
-import java.io.FileInputStream;
 
 /**
  * Hyphenator.java is an adaptation of Mathew Kurian' TextJustify-Android
@@ -144,47 +136,6 @@ public class Hyphenator  {
             result.append(word,i, i + 1);
         }
         return result.toString();
-    }
-
-    public static void write(String name, TrieNode t) {
-        try {
-            FSTObjectOutput out = new FSTObjectOutput(new FileOutputStream(name + ".bin"));
-            out.writeObject( t );
-            out.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static TrieNode read(String name) {
-        TrieNode t = null;
-        try {
-            FSTObjectInput in = new FSTObjectInput(new FileInputStream(name +".bin"));
-            t = (TrieNode)in.readObject();
-            in.close();
-        } catch(IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return t;
-    }
-
-    public static void main(String[] args) {
-        for(int i=0; i < 5; i++) {
-            for (HyphenationPattern p : HyphenationPattern.values()) {
-                System.out.println(p.name());
-                long start = System.currentTimeMillis();
-                TrieNode t = createTrie(p.patterns);
-                System.out.println("createTrie() took " + (System.currentTimeMillis() - start) + " ms");
-                start = System.currentTimeMillis();
-                write(p.name(), t);
-                System.out.println("write() took " + (System.currentTimeMillis() - start) + " ms");
-                start = System.currentTimeMillis();
-                t = read(p.name());
-                System.out.println("read() took " + (System.currentTimeMillis() - start) + " ms");
-            }
-        }
     }
 
 }
