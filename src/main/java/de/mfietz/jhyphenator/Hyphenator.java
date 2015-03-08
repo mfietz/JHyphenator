@@ -1,7 +1,7 @@
 package de.mfietz.jhyphenator;
 
-import gnu.trove.map.TIntObjectMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import org.nustaq.serialization.FSTObjectInput;
 import org.nustaq.serialization.FSTObjectOutput;
 
@@ -150,7 +150,7 @@ public class Hyphenator  {
 
         public TrieNode() {}
 
-        TIntObjectMap<TrieNode> codePoint = new TIntObjectHashMap<TrieNode>();;
+        Int2ObjectMap<TrieNode> codePoint = new Int2ObjectArrayMap<TrieNode>();;
         int[] points;
     }
 
