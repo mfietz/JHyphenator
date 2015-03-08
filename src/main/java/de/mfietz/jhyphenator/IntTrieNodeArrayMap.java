@@ -6,10 +6,21 @@ public class IntTrieNodeArrayMap implements IntTrieNodeMap, Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    static final int DEFAULT_INITIAL_CAPACITY = 16;
+
     private int[] keys = new int[0];
     private TrieNode[] values = new TrieNode[0];
 
-    private int size;
+    private int size = 0;
+
+    public IntTrieNodeArrayMap() {
+        this(DEFAULT_INITIAL_CAPACITY);
+    }
+
+    public IntTrieNodeArrayMap(int capacity) {
+        keys = new int[capacity];
+        values = new TrieNode[capacity];
+    }
 
     private int findIndex(final int key) {
         for(int i = 0; i < size; i++) {
@@ -29,7 +40,7 @@ public class IntTrieNodeArrayMap implements IntTrieNodeMap, Serializable {
             return oldValue;
         }
         if (size == keys.length) {
-            final int[] newKeys = new int[size == 0 ? 2 : size * 2 ];
+            final int[] newKeys = new int[size == 0 ? DEFAULT_INITIAL_CAPACITY : size * 2 ];
             System.arraycopy(keys, 0, newKeys, 0, size);
             final TrieNode[] newValues = new TrieNode[size == 0 ? 2 : size * 2];
             System.arraycopy(values, 0, newValues, 0, size);

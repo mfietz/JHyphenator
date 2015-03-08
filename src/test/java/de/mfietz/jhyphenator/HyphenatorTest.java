@@ -14,15 +14,15 @@ public class HyphenatorTest {
         Hyphenator h = Hyphenator.getInstance(de);
 
         String expected = "Koch|schu|le";
-        String actual = h.hyphenate("Kochschule");
+        String actual = StringJoiner.join(h.hyphenate("Kochschule"), "|");
         assertEquals(expected, actual);
 
         expected = "See|wet|ter|dienst";
-        actual = h.hyphenate("Seewetterdienst");
+        actual = StringJoiner.join(h.hyphenate("Seewetterdienst"), "|");
         assertEquals(expected, actual);
 
         expected = "Hoch|ver|rat";
-        actual = h.hyphenate("Hochverrat");
+        actual = StringJoiner.join(h.hyphenate("Hochverrat"), "|");
         assertEquals(expected, actual);
     }
 
@@ -31,7 +31,7 @@ public class HyphenatorTest {
         HyphenationPattern de = HyphenationPattern.lookup("de");
         Hyphenator h = Hyphenator.getInstance(de);
         String expected = "Chris|ti|an";
-        String actual = h.hyphenate("Christian");
+        String actual = StringJoiner.join(h.hyphenate("Christian"), "|");
         assertEquals(expected, actual);
     }
 
@@ -41,11 +41,11 @@ public class HyphenatorTest {
         Hyphenator h = Hyphenator.getInstance(us);
 
         String expected = "croc|o|dile";
-        String actual = h.hyphenate("crocodile");
+        String actual = StringJoiner.join(h.hyphenate("crocodile"), "|");
         assertEquals(expected, actual);
 
         expected = "ac|tiv|ity";
-        actual = h.hyphenate("activity");
+        actual = StringJoiner.join(h.hyphenate("activity"), "|");
         assertEquals(expected, actual);
     }
 

@@ -1,6 +1,9 @@
 package de.mfietz.jhyphenator;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -24,7 +27,9 @@ import java.util.Map;
  *
  */
 
-public class Hyphenator  {
+public class Hyphenator implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private static final HashMap<HyphenationPattern, Hyphenator> cached;
 
@@ -36,10 +41,14 @@ public class Hyphenator  {
     private int leftMin;
     private int rightMin;
 
+    public Hyphenator(TrieNode trie, int leftMin, int rightMin) {
+        this.trie = trie;
+        this.leftMin = leftMin;
+        this.rightMin = rightMin;
+    }
+
     private Hyphenator(HyphenationPattern pattern) {
-        this.trie = this.createTrie(pattern.patterns);
-        this.leftMin = pattern.leftMin;
-        this.rightMin = pattern.rightMin;
+        this(createTrie(pattern.patterns), pattern.leftMin, pattern.rightMin);
     }
 
     public static Hyphenator getInstance(HyphenationPattern hyphenationPattern) {
@@ -64,38 +73,58 @@ public class Hyphenator  {
                patterns[i/key] = value.substring(i, i+key);
             }
             for (int i = 0; i < patterns.length; i++) {
-
-                String[] chars = patterns[i].replaceAll("[0-9]", "").split("");
-
-                String[] points = patterns[i].split("[^0-9]");
-
+                String pattern = patterns[i];
+                // String[] chars = patterns[i].replaceAll("[0-9]", "").split("");
                 t = tree;
 
-                for (int c = 0; c < chars.length; c++) {
-                    if (chars[c].length() == 0) {
+                for (int c = 0; c < pattern.length(); c++) {
+                    char chr = pattern.charAt(c);
+                    if (Character.isDigit(chr)) {
                         continue;
                     }
-                    int codePoint = chars[c].codePointAt(0);
+                    int codePoint = pattern.codePointAt(c);
+                    // int codePoint = chars[c].codePointAt(0);
                     if (t.codePoint.get(codePoint) == null) {
                         t.codePoint.put(codePoint, new TrieNode());
                     }
                     t = t.codePoint.get(codePoint);
                 }
 
+                /*
+                String[] points = patterns[i].split("[^0-9]");
                 t.points = new int[points.length];
                 for (int p = 0; p < points.length; p++) {
                     try {
                         t.points[p] = Integer.valueOf(points[p]);
                     } catch (NumberFormatException e) {
+                        e.printStackTrace();
                         t.points[p] = 0;
                     }
                 }
+                */
+
+                IntArrayList list = new IntArrayList();
+                int digitStart = -1;
+                for (int p = 0; p < pattern.length(); p++) {
+                    if(Character.isDigit(pattern.charAt(p))) {
+                        if(digitStart < 0) {
+                            digitStart = p;
+                        }
+                    } else if(digitStart >= 0) {
+                        String number = pattern.substring(digitStart, p);
+                        list.add(Integer.valueOf(number));
+                        digitStart = -1;
+                    } else {
+                        list.add(0);
+                    }
+                }
+                t.points = list.toArray();
             }
         }
         return tree;
     }
 
-    public String hyphenate(String word) {
+    public List<String> hyphenate(String word) {
         word = "_" + word + "_";
 
         String lowercase = word.toLowerCase();
@@ -128,14 +157,29 @@ public class Hyphenator  {
             }
         }
 
-        StringBuilder result = new StringBuilder();
+        List<String> result = new ArrayList<String>();
+        int start = 1;
         for (int i = 1; i < wordLength - 1; i++) {
             if (i > this.leftMin && i < (wordLength - this.rightMin) && points[i] % 2 > 0) {
-                result.append("|");
+                result.add(word.substring(start, i));
+                start = i;
             }
-            result.append(word,i, i + 1);
         }
-        return result.toString();
+        if(start < word.length()-1) {
+            result.add(word.substring(start, word.length()-1));
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        for(int i=0; i < 5; i++) {
+            for (HyphenationPattern p : HyphenationPattern.values()) {
+                System.out.println(p.name());
+                long start = System.currentTimeMillis();
+                TrieNode t = createTrie(p.patterns);
+                System.out.println("createTrie() took " + (System.currentTimeMillis() - start) + " ms");
+            }
+        }
     }
 
 }
