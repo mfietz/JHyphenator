@@ -10,5 +10,5 @@ public class TrieNode implements Serializable {
 
     IntTrieNodeMap codePoint = new IntTrieNodeArrayMap();;
     int[] points;
-}
 
+}
