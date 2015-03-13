@@ -16,7 +16,7 @@ public class IntArrayList {
     }
 
     public void add(int i) {
-        if(size == values.length) {
+        if (size == values.length) {
             int[] newValues = new int[size == 0 ? DEFAULT_INITIAL_CAPACITY : size * 2];
             System.arraycopy(values, 0, newValues, 0, size);
             values = newValues;
