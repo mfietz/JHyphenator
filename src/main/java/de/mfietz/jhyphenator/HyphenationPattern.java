@@ -5,19 +5,8 @@ import java.util.Map;
 
 public enum HyphenationPattern {
 
-    BE(2,2, new HashMap<Integer, String>() {
-        {
-            put(3, "а1аа1еа1ёа1іа1оа1уа1ыа1эа1юа1яе1ае1ее1ёе1іе1ое1уе1ые1эе1юе1яё1аё1её1ёё1іё1оё1уё1ыё1эё1юё1яі1аі1еі1ёі1іі1оі1уі1ыі1эі1юі1яо1ао1ео1ёо1іо1оо1уо1ыо1эо1юо1яу1ау1еу1ёу1іу1оу1уу1ыу1эу1юу1яы1аы1еы1ёы1іы1оы1уы1ыы1эы1юы1яэ1аэ1еэ1ёэ1іэ1оэ1уэ1ыэ1ээ1юэ1яю1аю1ею1ёю1ію1ою1ую1ыю1эю1юю1яя1ая1ея1ёя1ія1оя1уя1ыя1эя1юя1я_б88б__в88в__г88г__ґ88ґ__д88д__ж88ж__з88з__й88й__к88к__л88л__м88м__н88н__п88п__р88р__с88с__т88т__ў88ў__ф88ф__х88х__ц88ц__ч88ч__ш88ш__ь88ь__а88а__е88е__ё88ё__і88і__о88о__у88у__ы88ы__э88э__ю88ю__я88я_б1бв1вг1гґ1ґд1дж1жз1зй1йк1кл1лм1мн1нп1пр1рс1ст1тў1ўф1фх1хц1цч1чш1шь1ьб8ьв8ьг8ьґ8ьд8ьж8ьз8ьй8ьк8ьл8ьм8ьн8ьп8ьр8ьс8ьт8ьў8ьф8ьх8ьц8ьч8ьш8ьь8ьд8зд8ж");
-            put(4, "1б8а1б8е1б8ё1б8і1б8о1б8у1б8ы1б8э1б8ю1б8я1в8а1в8е1в8ё1в8і1в8о1в8у1в8ы1в8э1в8ю1в8я1г8а1г8е1г8ё1г8і1г8о1г8у1г8ы1г8э1г8ю1г8я1ґ8а1ґ8е1ґ8ё1ґ8і1ґ8о1ґ8у1ґ8ы1ґ8э1ґ8ю1ґ8я1д8а1д8е1д8ё1д8і1д8о1д8у1д8ы1д8э1д8ю1д8я1ж8а1ж8е1ж8ё1ж8і1ж8о1ж8у1ж8ы1ж8э1ж8ю1ж8я1з8а1з8е1з8ё1з8і1з8о1з8у1з8ы1з8э1з8ю1з8я1й8а1й8е1й8ё1й8і1й8о1й8у1й8ы1й8э1й8ю1й8я1к8а1к8е1к8ё1к8і1к8о1к8у1к8ы1к8э1к8ю1к8я1л8а1л8е1л8ё1л8і1л8о1л8у1л8ы1л8э1л8ю1л8я1м8а1м8е1м8ё1м8і1м8о1м8у1м8ы1м8э1м8ю1м8я1н8а1н8е1н8ё1н8і1н8о1н8у1н8ы1н8э1н8ю1н8я1п8а1п8е1п8ё1п8і1п8о1п8у1п8ы1п8э1п8ю1п8я1р8а1р8е1р8ё1р8і1р8о1р8у1р8ы1р8э1р8ю1р8я1с8а1с8е1с8ё1с8і1с8о1с8у1с8ы1с8э1с8ю1с8я1т8а1т8е1т8ё1т8і1т8о1т8у1т8ы1т8э1т8ю1т8я1ў8а1ў8е1ў8ё1ў8і1ў8о1ў8у1ў8ы1ў8э1ў8ю1ў8я1ф8а1ф8е1ф8ё1ф8і1ф8о1ф8у1ф8ы1ф8э1ф8ю1ф8я1х8а1х8е1х8ё1х8і1х8о1х8у1х8ы1х8э1х8ю1х8я1ц8а1ц8е1ц8ё1ц8і1ц8о1ц8у1ц8ы1ц8э1ц8ю1ц8я1ч8а1ч8е1ч8ё1ч8і1ч8о1ч8у1ч8ы1ч8э1ч8ю1ч8я1ш8а1ш8е1ш8ё1ш8і1ш8о1ш8у1ш8ы1ш8э1ш8ю1ш8я1ь8а1ь8е1ь8ё1ь8і1ь8о1ь8у1ь8ы1ь8э1ь8ю1ь8я_бб88бб__бв88бв__бг88бг__бґ88бґ__бд88бд__бж88бж__бз88бз__бй88бй__бк88бк__бл88бл__бм88бм__бн88бн__бп88бп__бр88бр__бс88бс__бт88бт__бў88бў__бф88бф__бх88бх__бц88бц__бч88бч__бш88бш__бь88бь__б'8_б’8_вб88вб__вв88вв__вг88вг__вґ88вґ__вд88вд__вж88вж__вз88вз__вй88вй__вк88вк__вл88вл__вм88вм__вн88вн__вп88вп__вр88вр__вс88вс__вт88вт__вў88вў__вф88вф__вх88вх__вц88вц__вч88вч__вш88вш__вь88вь__в'8_в’8_гб88гб__гв88гв__гг88гг__гґ88гґ__гд88гд__гж88гж__гз88гз__гй88гй__гк88гк__гл88гл__гм88гм__гн88гн__гп88гп__гр88гр__гс88гс__гт88гт__гў88гў__гф88гф__гх88гх__гц88гц__гч88гч__гш88гш__гь88гь__г'8_г’8_ґб88ґб__ґв88ґв__ґг88ґг__ґґ88ґґ__ґд88ґд__ґж88ґж__ґз88ґз__ґй88ґй__ґк88ґк__ґл88ґл__ґм88ґм__ґн88ґн__ґп88ґп__ґр88ґр__ґс88ґс__ґт88ґт__ґў88ґў__ґф88ґф__ґх88ґх__ґц88ґц__ґч88ґч__ґш88ґш__ґь88ґь__ґ'8_ґ’8_дб88дб__дв88дв__дг88дг__дґ88дґ__дд88дд__дж88дж__дз88дз__дй88дй__дк88дк__дл88дл__дм88дм__дн88дн__дп88дп__др88др__дс88дс__дт88дт__дў88дў__дф88дф__дх88дх__дц88дц__дч88дч__дш88дш__дь88дь__д'8_д’8_жб88жб__жв88жв__жг88жг__жґ88жґ__жд88жд__жж88жж__жз88жз__жй88жй__жк88жк__жл88жл__жм88жм__жн88жн__жп88жп__жр88жр__жс88жс__жт88жт__жў88жў__жф88жф__жх88жх__жц88жц__жч88жч__жш88жш__жь88жь__ж'8_ж’8_зб88зб__зв88зв__зг88зг__зґ88зґ__зд88зд__зж88зж__зз88зз__зй88зй__зк88зк__зл88зл__зм88зм__зн88зн__зп88зп__зр88зр__зс88зс__зт88зт__зў88зў__зф88зф__зх88зх__зц88зц__зч88зч__зш88зш__зь88зь__з'8_з’8_йб88йб__йв88йв__йг88йг__йґ88йґ__йд88йд__йж88йж__йз88йз__йй88йй__йк88йк__йл88йл__йм88йм__йн88йн__йп88йп__йр88йр__йс88йс__йт88йт__йў88йў__йф88йф__йх88йх__йц88йц__йч88йч__йш88йш__йь88йь__й'8_й’8_кб88кб__кв88кв__кг88кг__кґ88кґ__кд88кд__кж88кж__кз88кз__кй88кй__кк88кк__кл88кл__км88км__кн88кн__кп88кп__кр88кр__кс88кс__кт88кт__кў88кў__кф88кф__кх88кх__кц88кц__кч88кч__кш88кш__кь88кь__к'8_к’8_лб88лб__лв88лв__лг88лг__лґ88лґ__лд88лд__лж88лж__лз88лз__лй88лй__лк88лк__лл88лл__лм88лм__лн88лн__лп88лп__лр88лр__лс88лс__лт88лт__лў88лў__лф88лф__лх88лх__лц88лц__лч88лч__лш88лш__ль88ль__л'8_л’8_мб88мб__мв88мв__мг88мг__мґ88мґ__мд88мд__мж88мж__мз88мз__мй88мй__мк88мк__мл88мл__мм88мм__мн88мн__мп88мп__мр88мр__мс88мс__мт88мт__мў88мў__мф88мф__мх88мх__мц88мц__мч88мч__мш88мш__мь88мь__м'8_м’8_нб88нб__нв88нв__нг88нг__нґ88нґ__нд88нд__нж88нж__нз88нз__нй88нй__нк88нк__нл88нл__нм88нм__нн88нн__нп88нп__нр88нр__нс88нс__нт88нт__нў88нў__нф88нф__нх88нх__нц88нц__нч88нч__нш88нш__нь88нь__н'8_н’8_пб88пб__пв88пв__пг88пг__пґ88пґ__пд88пд__пж88пж__пз88пз__пй88пй__пк88пк__пл88пл__пм88пм__пн88пн__пп88пп__пр88пр__пс88пс__пт88пт__пў88пў__пф88пф__пх88пх__пц88пц__пч88пч__пш88пш__пь88пь__п'8_п’8_рб88рб__рв88рв__рг88рг__рґ88рґ__рд88рд__рж88рж__рз88рз__рй88рй__рк88рк__рл88рл__рм88рм__рн88рн__рп88рп__рр88рр__рс88рс__рт88рт__рў88рў__рф88рф__рх88рх__рц88рц__рч88рч__рш88рш__рь88рь__р'8_р’8_сб88сб__св88св__сг88сг__сґ88сґ__сд88сд__сж88сж__сз88сз__сй88сй__ск88ск__сл88сл__см88см__сн88сн__сп88сп__ср88ср__сс88сс__ст88ст__сў88сў__сф88сф__сх88сх__сц88сц__сч88сч__сш88сш__сь88сь__с'8_с’8_тб88тб__тв88тв__тг88тг__тґ88тґ__тд88тд__тж88тж__тз88тз__тй88тй__тк88тк__тл88тл__тм88тм__тн88тн__тп88тп__тр88тр__тс88тс__тт88тт__тў88тў__тф88тф__тх88тх__тц88тц__тч88тч__тш88тш__ть88ть__т'8_т’8_ўб88ўб__ўв88ўв__ўг88ўг__ўґ88ўґ__ўд88ўд__ўж88ўж__ўз88ўз__ўй88ўй__ўк88ўк__ўл88ўл__ўм88ўм__ўн88ўн__ўп88ўп__ўр88ўр__ўс88ўс__ўт88ўт__ўў88ўў__ўф88ўф__ўх88ўх__ўц88ўц__ўч88ўч__ўш88ўш__ўь88ўь__ў'8_ў’8_фб88фб__фв88фв__фг88фг__фґ88фґ__фд88фд__фж88фж__фз88фз__фй88фй__фк88фк__фл88фл__фм88фм__фн88фн__фп88фп__фр88фр__фс88фс__фт88фт__фў88фў__фф88фф__фх88фх__фц88фц__фч88фч__фш88фш__фь88фь__ф'8_ф’8_хб88хб__хв88хв__хг88хг__хґ88хґ__хд88хд__хж88хж__хз88хз__хй88хй__хк88хк__хл88хл__хм88хм__хн88хн__хп88хп__хр88хр__хс88хс__хт88хт__хў88хў__хф88хф__хх88хх__хц88хц__хч88хч__хш88хш__хь88хь__х'8_х’8_цб88цб__цв88цв__цг88цг__цґ88цґ__цд88цд__цж88цж__цз88цз__цй88цй__цк88цк__цл88цл__цм88цм__цн88цн__цп88цп__цр88цр__цс88цс__цт88цт__цў88цў__цф88цф__цх88цх__цц88цц__цч88цч__цш88цш__ць88ць__ц'8_ц’8_чб88чб__чв88чв__чг88чг__чґ88чґ__чд88чд__чж88чж__чз88чз__чй88чй__чк88чк__чл88чл__чм88чм__чн88чн__чп88чп__чр88чр__чс88чс__чт88чт__чў88чў__чф88чф__чх88чх__чц88чц__чч88чч__чш88чш__чь88чь__ч'8_ч’8_шб88шб__шв88шв__шг88шг__шґ88шґ__шд88шд__шж88шж__шз88шз__шй88шй__шк88шк__шл88шл__шм88шм__шн88шн__шп88шп__шр88шр__шс88шс__шт88шт__шў88шў__шф88шф__шх88шх__шц88шц__шч88шч__шш88шш__шь88шь__ш'8_ш’8_ьб88ьб__ьв88ьв__ьг88ьг__ьґ88ьґ__ьд88ьд__ьж88ьж__ьз88ьз__ьй88ьй__ьк88ьк__ьл88ьл__ьм88ьм__ьн88ьн__ьп88ьп__ьр88ьр__ьс88ьс__ьт88ьт__ьў88ьў__ьф88ьф__ьх88ьх__ьц88ьц__ьч88ьч__ьш88ьш__ьь88ьь__ь'8_ь’8б8'1б8’1в8'1в8’1г8'1г8’1ґ8'1ґ8’1д8'1д8’1ж8'1ж8’1з8'1з8’1й8'1й8’1к8'1к8’1л8'1л8’1м8'1м8’1н8'1н8’1п8'1п8’1р8'1р8’1с8'1с8’1т8'1т8’1ў8'1ў8’1ф8'1ф8’1х8'1х8’1ц8'1ц8’1ч8'1ч8’1ш8'1ш8’1ь8'1ь8’1б8а3б8у3б8о3б8е3б8ё3б8ы3б8э3б8і3в8а3в8у3в8о3в8е3в8ё3в8ы3в8э3в8і3г8а3г8у3г8о3г8е3г8ё3г8ы3г8э3г8і3ґ8а3ґ8у3ґ8о3ґ8е3ґ8ё3ґ8ы3ґ8э3ґ8і3д8а3д8у3д8о3д8е3д8ё3д8ы3д8э3д8і3ж8а3ж8у3ж8о3ж8е3ж8ё3ж8ы3ж8э3ж8і3з8а3з8у3з8о3з8е3з8ё3з8ы3з8э3з8і3к8а3к8у3к8о3к8е3к8ё3к8ы3к8э3к8і3л8а3л8у3л8о3л8е3л8ё3л8ы3л8э3л8і3м8а3м8у3м8о3м8е3м8ё3м8ы3м8э3м8і3н8а3н8у3н8о3н8е3н8ё3н8ы3н8э3н8і3п8а3п8у3п8о3п8е3п8ё3п8ы3п8э3п8і3р8а3р8у3р8о3р8е3р8ё3р8ы3р8э3р8і3с8а3с8у3с8о3с8е3с8ё3с8ы3с8э3с8і3т8а3т8у3т8о3т8е3т8ё3т8ы3т8э3т8і3ф8а3ф8у3ф8о3ф8е3ф8ё3ф8ы3ф8э3ф8і3х8а3х8у3х8о3х8е3х8ё3х8ы3х8э3х8і3ц8а3ц8у3ц8о3ц8е3ц8ё3ц8ы3ц8э3ц8і3ч8а3ч8у3ч8о3ч8е3ч8ё3ч8ы3ч8э3ч8і3ш8а3ш8у3ш8о3ш8е3ш8ё3ш8ы3ш8э3ш8і3а8й1о8й1е8й1і8й1э8й1ю8й1я8й1ё8й1ы8й1а8ў1о8ў1е8ў1і8ў1э8ў1ю8ў1я8ў1ё8ў1ы8ў1б8'1б8’1в8'1в8’1г8'1г8’1ґ8'1ґ8’1д8'1д8’1ж8'1ж8’1з8'1з8’1к8'1к8’1л8'1л8’1м8'1м8’1н8'1н8’1п8'1п8’1р8'1р8’1с8'1с8’1т8'1т8’1ф8'1ф8’1х8'1х8’1ц8'1ц8’1ч8'1ч8’1ш8'1ш8’1б8ь1в8ь1г8ь1ґ8ь1д8ь1ж8ь1з8ь1к8ь1л8ь1м8ь1н8ь1п8ь1р8ь1с8ь1т8ь1ф8ь1х8ь1ц8ь1ч8ь1ш8ь1");
-            put(5, "_ад1б_ад1в_ад1г_ад1ґ_ад1д_ад1ж_ад1з_ад1к_ад1л_ад1м_ад1н_ад1п_ад1р_ад1с_ад1т_ад1ф_ад1х_ад1ц_ад1ч_ад1ш_аб1б_аб1в_аб1г_аб1ґ_аб1д_аб1ж_аб1з_аб1к_аб1л_аб1м_аб1н_аб1п_аб1р_аб1с_аб1т_аб1ф_аб1х_аб1ц_аб1ч_аб1ш_уз1б_уз1в_уз1г_уз1ґ_уз1д_уз1ж_уз1з_уз1к_уз1л_уз1м_уз1н_уз1п_уз1р_уз1с_уз1т_уз1ф_уз1х_уз1ц_уз1ч_уз1ш_ус1б_ус1в_ус1г_ус1ґ_ус1д_ус1ж_ус1з_ус1к_ус1л_ус1м_ус1н_ус1п_ус1р_ус1с_ус1т_ус1ф_ус1х_ус1ц_ус1ч_ус1ш8льш_8сць_8дзь_");
-            put(6, "_над1б_над1в_над1г_над1ґ_над1д_над1ж_над1з_над1к_над1л_над1м_над1н_над1п_над1р_над1с_над1т_над1ф_над1х_над1ц_над1ч_над1ш_пад1б_пад1в_пад1г_пад1ґ_пад1д_пад1ж_пад1з_пад1к_пад1л_пад1м_пад1н_пад1п_пад1р_пад1с_пад1т_пад1ф_пад1х_пад1ц_пад1ч_пад1ш_раз1б_раз1в_раз1г_раз1ґ_раз1д_раз1ж_раз1з_раз1к_раз1л_раз1м_раз1н_раз1п_раз1р_раз1с_раз1т_раз1ф_раз1х_раз1ц_раз1ч_раз1ш_рас1б_рас1в_рас1г_рас1ґ_рас1д_рас1ж_рас1з_рас1к_рас1л_рас1м_рас1н_рас1п_рас1р_рас1с_рас1т_рас1ф_рас1х_рас1ц_рас1ч_рас1ш_роз1б_роз1в_роз1г_роз1ґ_роз1д_роз1ж_роз1з_роз1к_роз1л_роз1м_роз1н_роз1п_роз1р_роз1с_роз1т_роз1ф_роз1х_роз1ц_роз1ч_роз1ш_бяз1б_бяз1в_бяз1г_бяз1ґ_бяз1д_бяз1ж_бяз1з_бяз1к_бяз1л_бяз1м_бяз1н_бяз1п_бяз1р_бяз1с_бяз1т_бяз1ф_бяз1х_бяз1ц_бяз1ч_бяз1ш_без1б_без1в_без1г_без1ґ_без1д_без1ж_без1з_без1к_без1л_без1м_без1н_без1п_без1р_без1с_без1т_без1ф_без1х_без1ц_без1ч_без1ш_бяс1б_бяс1в_бяс1г_бяс1ґ_бяс1д_бяс1ж_бяс1з_бяс1к_бяс1л_бяс1м_бяс1н_бяс1п_бяс1р_бяс1с_бяс1т_бяс1ф_бяс1х_бяс1ц_бяс1ч_бяс1ш_бес1б_бес1в_бес1г_бес1ґ_бес1д_бес1ж_бес1з_бес1к_бес1л_бес1м_бес1н_бес1п_бес1р_бес1с_бес1т_бес1ф_бес1х_бес1ц_бес1ч_бес1ш_рос1б_рос1в_рос1г_рос1ґ_рос1д_рос1ж_рос1з_рос1к_рос1л_рос1м_рос1н_рос1п_рос1р_рос1с_рос1т_рос1ф_рос1х_рос1ц_рос1ч_рос1швё8рст");
-            put(7, "_праз1б_праз1в_праз1г_праз1ґ_праз1д_праз1ж_праз1з_праз1к_праз1л_праз1м_праз1н_праз1п_праз1р_праз1с_праз1т_праз1ф_праз1х_праз1ц_праз1ч_праз1ш_ад8зінтэ8мбр__дву8х3_шма8т1");
-            put(8, "_перад1б_перад1в_перад1г_перад1ґ_перад1д_перад1ж_перад1з_перад1к_перад1л_перад1м_перад1н_перад1п_перад1р_перад1с_перад1т_перад1ф_перад1х_перад1ц_перад1ч_перад1ш_цераз1б_цераз1в_цераз1г_цераз1ґ_цераз1д_цераз1ж_цераз1з_цераз1к_цераз1л_цераз1м_цераз1н_цераз1п_цераз1р_цераз1с_цераз1т_цераз1ф_цераз1х_цераз1ц_цераз1ч_цераз1ш_церас1б_церас1в_церас1г_церас1ґ_церас1д_церас1ж_церас1з_церас1к_церас1л_церас1м_церас1н_церас1п_церас1р_церас1с_церас1т_церас1ф_церас1х_церас1ц_церас1ч_церас1шна1д8вор");
-            put(9, "за1п8люшч_па1д8зял_па1д8зелраз1г8лядраз1г8ледзло1ў8жыв_па1д8зяк_вы1к8люч");
-            put(10, "віда1з8мянвіда1з8менза3ц8вярдз_па3г8лядз");
-            put(12, "слова1ў8тваркрова3ў8твар");
-        }
-    }),
+    // For questions about the Catalan hyphenation patterns
+    // ask Jordi Rosell (jroselln at gmail dot com)
     CA(3,3, new HashMap<Integer, String>() {
         {
             put(3, "u1í1ba1bi1bo1bu1ca1ce1ci1co1cu1da1de1di1do3du1fa1fe1fi1fo1fu1ga1ge1gi1go1gu1ha1he1hi1ho1hu1ja1je1ji1jo1ju1la1le1li1lo1lu1ma1me1mi1mo1mu1na1ne3ni1no1nu1pa3pe3pi3po1pu1qu1ra1re1ri1ro1ru1sa1se1si1so1su1ta1te1ti1to1tu1va1ve1vi1vo1vu1xa1xe1xi1xo1xu1za1ze1zi1zo1zu1bé1bí1bó1bú1bà1bè1bò1cé1cí1có1cú1cà1cè1cò1ço1ça1çu1çó1çú1çà1çò1dé1dí1dó1dú1dà1dè1dò1fé1fí1fó1fú1fà1fè1fò1gé1gí1gó1gú1gà1gè1gò1gü1hé1hí1hó1hú1hà1hè1hò1jé1jí1jó1jú1jà1jè1jò1lé1lí1ló1lú1là1lè1lò1mé1mí1mó1mú1mà1mè1mò1né1ní1nó1nú1nà1nè1nò1pé1pí1pó1pú1pà1pè1pò1qü1ré1rí1ró1rú1rà1rè1rò1sé1sí1só1sú1sà1sè1sò1té1tí1tó1tú1tà1tè1tò1vé1ví1vó1vú1và1vè1vò1xé1xí1xó1xú1xà1xè1xò1zé1zí1zó1zú1zà1zè1zò3prü1òü1èü1àü1úü1óü1íü1éü1oü1eü1aï1iï1òï1èï1àï1úï1óï1íï1éï1oï1eï1aò1üò1ïò1oò1eò1aè1üè1ïè1oè1eè1aà1üà1ïà1oà1eà1aú1üú1ïú1oú1eú1aó1üó1ïó1oó1eó1aí1üí1ïí1oí1eí1aé1üé1ïé1oé1eé1au1üu1ïu1òu1èu1àu1úu1ó1beu1éo1üo1ïo1òo1èo1ào1úo1óo1ío1éi1üi1ïi1òi1èi1ài1úi1ói1íi1ée1üe1ïe1òe1èe1àe1úe1óe1íe1éa1üa1ïa1òa1èa1àa1úa1óa1ía1éu1ou1eu1ao1oo1eo1ai1oi1ei1ae1oe1ee1aa1oa1ea1a");
@@ -31,6 +20,8 @@ public enum HyphenationPattern {
             put(12, "ru1t2herfordni2etz1sc2he");
         }
     }),
+    // For questions about the Czech hyphenation patterns
+    // ask Martin Hasoň (martin dot hason at gmail dot com)
     CS(2,2, new HashMap<Integer, String>() {
     	{
     		put(2, "a11f1g1k1n1pu11vy11zé11ňó11š1ť1ú1ž");
@@ -67,6 +58,8 @@ public enum HyphenationPattern {
             put(13, "_er8stritten_");
         }
     }),
+    // The en-GB hyphenation patterns are retrieved from
+    // http://tug_org/svn/texhyphen/trunk/collaboration/repository/hyphenator/
     EN_GB(2, 3, new HashMap<Integer, String>() {
     	{
             put(3, "sw2s2ym1p2chck1cl2cn2st24sss1rzz21moc1qcr2m5q2ct2byb1vcz2z5sd3bs1jbr4m3rs2hd2gbo2t3gd1jb1j1dosc2d1pdr2dt4m1v1dum3w2myd1vea2r2zr1we1bb2e2edn1az1irt2e1fe1j4aya4xr1q2av2tlzd4r2kr1jer1m1frh2r1fr2er1bqu44qft3ptr22ffy3wyv4y3ufl21fo1po2pn2ft3fut1wg1ba2ra4q2gh4ucm2ep5gp1fm5d2ap2aom1cg3p2gyuf2ha2h1bh1ch1d4nda2nhe22oz2oyo4xh1fh5h4hl2ot2hrun1h1wh2y2yp2aki2d2upie22ah2oo2igu4r2ii2omo1j2oiyn1lz42ip2iq2ir1aba4a2ocn3fuu4uv22ix1iz1jay1iy1h2lylx4l3wn5w2ji4jr4ng4jsy1gk1ck1fkk4y5fk1mkn21vok1pvr44vsk1t4vyk5vk1wl2aw5cn2ul3bw5fwh2wi2w1m1wowt4wy2wz4x1an1in1rn1ql3hxe4x1hx1ill24lsn3mlm2n1jx1ox3plr4x5wxx4");
@@ -78,6 +71,8 @@ public enum HyphenationPattern {
             put(9, "_bap5tismna5cious_econstit5na5ciousl_at5omisena5culari_cen5tena_clima5toepe5titionar5tisti_cri5ticirill5ingserpent5inrcen5tenaest5igati_de5scrib_de5signe_determ5ifals5ifiefan5tasizplas5ticiundeter5msmu5tatiopa5triciaosclero5s_fec5unda_ulti5matindeterm5ipart5ite_string5i5lutionizltramont5_re5storeter5iorit_invest5imonolog5introl5ler_lam5enta_po5sitio_para5dis_ora5tori_me5lodio");
     	}
     }),
+    // The en-US hyphenation patterns are retrieved from
+    // http://tug_org/svn/texhyphen/trunk/collaboration/repository/hyphenator/
     EN_US(2, 3, new HashMap<Integer, String>() {
         {
             put(3, "x1qei2e1je1f1to2tlou2w3c1tue1q4tvtw41tyo1q4tz4tcd2yd1wd1v1du1ta4eu1pas4y1droo2d1psw24sv1dod1m1fad1j1su4fdo2n4fh1fi4fm4fn1fopd42ft3fu1fy1ga2sss1ru5jd5cd1bg3bgd44uk2ok1cyo5jgl2g1m4pf4pg1gog3p1gr1soc1qgs2oi2g3w1gysk21coc5nh1bck1h1fh1h4hk1zo1ci4zms2hh1w2ch5zl2idc3c2us2igi3hi3j4ik1cab1vsa22btr1w4bp2io2ipu3u4irbk4b1j1va2ze2bf4oar1p4nz4zbi1u2iv4iy5ja1jeza1y1wk1bk3fkh4k1ikk4k1lk1mk5tk1w2ldr1mn1t2lfr1lr3j4ljl1l2lm2lp4ltn1rrh4v4yn1q1ly1maw1brg2r1fwi24ao2mhw4kr1cw5p4mkm1m1mo4wtwy4x1ar1ba2nn5mx1ex1h4mtx3i1muqu2p3wx3o4mwa1jx3p1naai2x1ua2fxx4y1ba2dn1jy1cn3fpr2y1dy1i");
@@ -92,6 +87,8 @@ public enum HyphenationPattern {
             put(12, "3ra4m5e1triz1e6p3i3neph1");
         }
     }),
+    // For questions about the the eo hyphenation patterns
+    // ask sergio.pokrovskij (ĉe) gmail.com
     EO(2,2, new HashMap<Integer, String>() {
     	{
             put(2, "a1e1i1o1u1");
@@ -110,6 +107,8 @@ public enum HyphenationPattern {
             put(15, "prestid2i3g2i3tstrof2a4n3t2i3n");
     	}
     }),
+    // For questions about the spanish hyphenation patterns
+    // ask Luis Pabon (lpabon at metagrama dot es)
     ES(2,2, new HashMap<Integer, String>() {
     	{
             put(2, "1b1c1d1f1g1j1k1l1m1n1ñ1p1q1r1s1t1v1w1x1y1z");
@@ -130,6 +129,8 @@ public enum HyphenationPattern {
             put(17, "_de3s4in3ter2e3sa_de3s4in3ter2e3sá_de3s4in3ter2e3se_de3s4in3ter2e3sé_de3s4in3ter2e3so_de3s4in3ter2e3só");
     	}
     }),
+    // For questions about the Estonian hyphenation patterns
+    // ask Peeter Marvet (pets at tehnokratt dot net)
     ET(3,3, new HashMap<Integer, String>() {
     	{
             put(3, "o1v1ma5šo4šk1še3ša2žž5žü5žö4žt4žp3žo4žn4žm4žl4žk4žj1ži4žf1že4žb1žaü4üü1vü1jü2hü1gü1bä1vä3jä1gä1dä1bäa4öü4ö3õö1vöo2ö1mö1lö1kö1jö1hö1dö1böa24õsõ2põ1jõ1gõ1dõ1b3zo3vä3võ3vi2vf3ve4vbuä2u1va1bu1ta1du1pu1ku1ju1gu1fu1ba1fa1g1tü1tä1tö1tõ3tua1ja1k3ti1ta4sž1sü1sä1söa1m1sõ1su1so1sia1p1se1sa4rš4rž1rü1rä3rö1rõ1ru2rt2rs1ro1ri1re1ra4pš4pž3pü1päa1t5pö3põ3pu1pia1v2phpg41pe4pd4pb1paoü24št4bb2bd4bf4bho1jo1go1f2bm2bn2bpo1b2bsoa24nš4nž1da1nü1nä1nö1nõ1nu2nt2ns1no2dd1de2nk1ni1ne2df1di1na4mž3mü3mä3mö1do1mu2mp1mo1du1mi2dõ4dä4dž1me1lü1lä1lö1lõe1be1d1lu2lt1lo1lie1fe1gl1g1le1la4kš1kü1kä1kö1kõe3j1ku2kt1ko1ki4kg1ka5jä5jõ3joj4ai1že1mi1v2iti1pi1ni1mi1ki1ji1gi1fie2i1di1be1pe1r4ia3hü1hä3hö1hõ1hu4ht1hoh1nh1l4hkh1je1t1hi1he3ha4gä3gue1ve1š2ff1fi4fj4fk1fo4gg4gf2fs3fu");
@@ -153,6 +154,8 @@ public enum HyphenationPattern {
             put(11, "1a2siaka2s1");
     	}
     }),
+    // The french hyphenation patterns are retrieved from
+    // http://tug_org/svn/texhyphen/trunk/collaboration/repository/hyphenator/
     FR(2, 3, new HashMap<Integer, String>() {
     	{
             put(2, "1ç1j1q");
@@ -172,11 +175,15 @@ public enum HyphenationPattern {
             put(16, "_chè2vre3feuille");
     	}
     }),
+    // For questions about the Hindi hyphenation patterns
+    // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
     HI(2, 2, new HashMap<Integer, String>() {
     	{
     		put(2, "अ1आ1इ1ई1उ1ऊ1ऋ1ऎ1ए1ऐ1ऒ1औ1ि1ा1ी1ु1ू1ृ1ॆ1े1ॊ1ो1ौ1्2ः1ं11क1ग1ख1घ1ङ1च1छ1ज1झ1ञ1ट1ठ1ड1ढ1ण1त1थ1द1ध1न1प1फ1ब1भ1म1य1र1ल1व1श1ष1स1ह1ळ1ऴ1ऱ");
     	}
     }),
+    // For questions about the armenian hyphenation patterns
+    // ask Sahak Petrosyan (sahak at mit dot edu)
     HY(1, 2, new HashMap<Integer, String>() {
     	{
     		put(3, "և1աև1եև1էև1ըև1իև1ոև1օ");
@@ -196,6 +203,10 @@ public enum HyphenationPattern {
             put(10, "_di2s3cine");
     	}
     }),
+    // Latin hyphenation patterns converted by
+    // Pablo Rodríguez (hyphenator at pragmata dot tk)
+    // based on LaTeX Latin hyphenation patterns by Claudio Beccari
+    // (http://tug.ctan.org/tex-archive/language/hyphenation/lahyph.tex)
     LA(2,2, new HashMap<Integer, String>() {
     	{
             put(2, "æ1œ11b1c1d1f1g1h1j1k1l1m1n1p1r1t1v1x1z");
@@ -209,6 +220,8 @@ public enum HyphenationPattern {
             put(10, "_di2s3cine");
     	}
     }),
+    // For questions about the Lithuanian hyphenation patterns
+    // ask Rogutės Sparnuotos (rogutes at googlemail dot com)
     LT(2, 2, new HashMap<Integer, String>() {
     	{
             put(3, "a1ba1ca1da1ea1fa1ha1ja1ka1la1ma1na2oa1pa1ra1sa1ta4ua1va1wa1ya1za1ąa1ęa1įa1ša1ųa1žb1jcu4d4zd4že1ce1ee1fe1ge1he1je1ke1le1me2oe3pe1re1se1te1ve1we1ye1ze1ąe1če1ęe1ėe1še1ųe1ūe1ž3gui2ai1ci1di2ei1fi1ji1ki1li1mi2oi1pi1ri2ui1vi1wi1yi1zi2ąi1či1ęi1įi1ši2ųi2ūi3ž1ju1jū3kek4i3ko3ku5ką3lą3lųm2am2one15noo1ao1bo1co1do1eo1fo1go1ho1io1jo1ko1lo1mo1no1po1ro1so1vo1wo1yo1zo1ąo1čo1ęo1ėo1įo1šo1ųo1ūo1žpa3p2ep2i3pop2yp2ėr2ar2ir2or2u3rą5rųs2esu1są35sėt2at2it2o3tęu1bu1cu1du1fu1gu1hu1ju1ku1lu1mu1nu2ou3pu1ru1su1uu1vu1wu1yu1zu1ąu1ču1ęu1įu1šu1ųu1žv2e3vą3vėy1ay1by1cy1dy1ey1fy1gy1hy1iy1jy1ky1ly1my1ny1oy1py3ry1sy1ty1uy1vy1wy1yy1zy1ąy1čy1ęy1ėy1įy1šy1ųy1ūy1žą1aą1bą1cą1dą1eą1fą1gą1hą1ią1ją1ką1lą1mą1ną1oą1pą1rą1są1tą1uą1vą1wą1yą1zą1ąą1čą1ęą1ėą1įą1šą1ųą1ūą1žę1aę1bę1cę1dę1eę1fę1gę1hę1ię1ję1kę1lę1mę1nę1oę1pę1rę1sę1tę1uę1vę1wę1yę1zę1ąę1čę1ęę1ėę1įę1šę1ųę1ūę1žė1aė1bė1cė1dė1eė1fė1gė1hė1iė1jė1kė1mė1nė1oė1pė1rė1uė1vė1wė1yė1zė1ąė1čė1ęė1ėė1įė1šė1ųė1ūė1žį1aį1bį1cį2eį1fį4gį1hį1iį1jį2lį2mį1nį1oį4pį2rį1sį1uį2vį1wį1yį1zį1ąį1čį1ęį1įį1šį1ųį1ūį1žų1aų1bų1cų1dų1eų1fų1gų1hų1ių1jų1kų1lų1mų1nų1oų1pų1rų1sų1tų1uų1vų1wų1yų1zų1ąų1čų1ęų1ėų1įų1šų1ųų1ūų1žū1aū1bū1cū1dū1eū1fū1gū1hū1iū1jū1kū1lū1mū1nū1oū1pū1rū1sū1tū1uū1vū1wū1yū1zū1ąū1čū1ęū1ėū1įū1šū1ųū1ūū1žž1jž2u");
@@ -219,6 +232,8 @@ public enum HyphenationPattern {
             put(8, "lap4s3to");
     	}
     }),
+    // For questions about the latvian hyphenation patterns
+    // ask Kristaps Karlsons (kristaps dot karlsons at gmail dot com)
     LV(2, 3, new HashMap<Integer, String>() {
     	{
             put(3, "d4z");
@@ -232,6 +247,9 @@ public enum HyphenationPattern {
             put(11, "d_vi1s2iem_2b3da3mies_2c3da3mies_2č3da3mies_2d3da3mies_2f3da3mies_2g3da3mies_2ģ3da3mies_2h3da3mies_2j3da3mies_2k3da3mies_2ķ3da3mies_2l3da3mies_2ļ3da3mies_2m3da3mies_2n3da3mies_2ņ3da3mies_2p3da3mies_2r3da3mies_2s3da3mies_2š3da3mies_2t3da3mies_2v3da3mies_2z3da3mies_2ž3da3mies_");	
     	}
     }),
+    // The norwegian hyphenation patterns were retrieved from 
+    // http://www.ctan.org/language/hyph-utf8/tex/generic/hyph-utf8/patterns/tex/hyph-no.tex
+    // and adapted by Erik Seierstad (erik dot seierstad at gmail dot com).
     NO(2, 2, new HashMap<Integer, String>() {
     	{
             put(3, "_a4_b6_c4_d6_e6_f4_g6_h4_i2_j4_k6_l6_m8_n8_o6_p6_r6_s6_t8_v6_y6_z4_æ8_ø6_å28aca1ha1ja1oa1ø2bc1be7bé6bg2bhbl26bnb2o4bpbr81by6cb4ccc2dc2lc1mcr81cuc6zcæ51da1de1di1do5dqdr48ds1du1dyd5z1dæ1dø2ea2ece1fe1he1je1ue1vey1é1aé1bé1dé1fé1gé1hé1ié1ké1lé1mé5oé1pé1ré1sé1té1vé5åè1r1fa1fe2ff1fi1fjfn61fo3fôfr22ft1fu1fy1fø4få1ga1ge1gé1gi1gjg1n1go1gu1gy1gåh2a4hc2hf2hh2hl2hnh4oh1p2hr4hthv4h6yh6å2ie2if2igi3hi1ii1j2ik4io2iri1ui5yi1øj1b2jdj2ej1f4jgj1hj2oj1pj1tj5vjy1j2ø2jå2kc1kekj22kkkl4kr6kv26ld1le7lè5lê2lg1li2ljl5q8lvl5wl3z1lø1mam1c1me2mé1mi1mom3q6ms1mu2mw1my5mæ1mø1må1nan1c6nd1ne1né6ng1ni2nk4nn1no7nón3q6ns1nun3w1nyn1z1nø2oa4oc2og2on2ooo4q2os2otow1ox3o1øo1åô4tó7tó8v1pa1pepl61po2pppr62ps1pu1pæqa5qu2r1c4rdr1j2rn4rsrx1r4z1se1sés1h1si1sjsl4s1ms1nsp2sv21sys4z1sæ1sø2tc1te1titr44ts6tt2tz1tæ2udu1hu1ju1uu1vu1wu1æ1vê8vs1vu1væw2aw1bwe2w1lw1mws5wy2w1zx7bx3fx7hx5kx1lx3rx7tx6uxy2y1by1cy1fy1hy1iy1j6yk2ysy1uy1vy1wy5æy5øz1cz1d1zez1fz1gz1kz1mz1pz5rz1sz1væ1fæg6æ2kø1bøg1ø1hø4iø1jø1o4øtå1aå1f2ågå1hå1iå1j6åmå3oås2å3uå1v");
@@ -245,6 +263,8 @@ public enum HyphenationPattern {
             put(11, "_blekk3s4t6_blekk9s8v4_rett7s8kri_sek4s5o6g5anseri8e9nedgjø6re7n6hgjen1opp3s4inseri8e9nentres9kjareonstitue9raonstitue9re");
     	}
     }),
+    // For questions about the dutch hyphenation patterns
+    // ask Remco Bloemen (remco dot bloemen at gmail dot com)
     NL(2, 2, new HashMap<Integer, String>() {
     	{
             put(2, "1b1çè1ê13ëî31ï3ñ1q1ü1z");
@@ -256,7 +276,7 @@ public enum HyphenationPattern {
             put(8, "_aftu5re_den4k5r_eer5ste_ets5te__gerst5a_leid5st_lui5t4j_mij4n5i_neu4t5j_nie4t5j_oot5jes_poort5j_ring5s4_seks5te_taart5j_ten4t5j_ter4p5a_ven4t5j_wen4s5taar4d5asaar5spelaar4t5onan4d3e4dan4s5te_apij4t5jar4s5tekart5jesvart5o4gear4t3o4vataart5jaten4t5rat4s5takats5top_ats5trekbaar5stebbe4l5agbbe4l5eebe4l5intber4g5afber4g5etbes5ten_bis5trooblij5stebon4t5o4bor4st5rda4g3e4tdbou4w5i4d3e4lek4d3e4lit4d3e4maiden4k5ofde4r5as_de4r5assder4s5omder5stra4d3e4tapdeu4r3o44d5ingelds5trekkdtaart5je4d5ernsedors5teeer5stonegel5ei_ege4l5oveger5engeits5te_eit5stenekaart5je4l5inktel4k3u4remens5te5endertie4n3en5te4n3i4voenst5ijven4stu4repits5tee4p5o4geepoort5jerd5uit_er5editie5rendeler5enen_erkeers5errie5tjerui5t4je5smuil_esp5riemes5tatiees5tekamestere5oeters5laeurs5taaeurs5te_eur4s5trevaar5tjeve5n4aafdors5tegast5rolgel4d3a4gen5stongenstu5rger5aap_ge4r3a4lger5slangers5lijge5spendges5ten_gge4r5ongou4d5eegrie4t5jgst5aangguts5te_haams5tahaars5tehar4t3o4hee5tjesheks5te_hek5stenherm5engher4p5aaherts5tehets5te_hits5te_hit5stenhors5te_hor5stenhots5te_hts5taalht4s5takht4s5tekhts5torehuts5te_idde4r5aid5s4meeie4g5insien4st5oienst5uries5tereiets5te_itper5stjks5taakjks5taalj5s4tengkeers5toke4l5intke4r5enkker5ste_ke5straakets5te_4k5indelkors5te_kor4t3o4ko5sjerekots5te_laat5stalan4d5oolang5stalecht5stle4n3a4dle4n3e4m4l3en5thle4r3a4kle4r3e4vle5s4tellets5te_levink5jlicht5stlits5te_lit5stenl4o1r2o3l4s5pootluts5te_ma4l5entmats5te_meest5almee5stovmen4s5uume4r5aakme4r3a4kmer5antemets5te_mits5te_mit5stenmkaart5jmors5te_mots5te_5muilde_naars5tr5n4a5denn5antennnars5te_nar5stennder5aalnde4r5annder5in_nds5taalnegen5en4n3e4migne4n5enkne5s4tekngs5tak_ngs5takengs5treknkaart5jnne4p5olnpoort5jnraads5ln5s4liepnst5aangnst5aansn4s5tekonst5radens5trekknst5roosn4t5aardntaar5tjnte5nachode4m5aroe4r3a4loers5takoers5te_og4st5eionke5lapooms5te_o5rigereor4t5ijlo5steroïover5stepaling5spa4n3a4dpats5te_pe4l3e4tpkaart5jplooi5tjpols5te_pons5te_por4t5rapper5stepren4t5jprie4t5jpring5s4puter5inputs5te_r5angst_rats5te_4re4ditiree5r4adreer5steremie5tjr5endertr5enveerre4t3o4grets5te_rie4k5aprij5ster4r5inganr5ingenirits5te_rit5stenrkaart5jrk4t5e4vrme4r3a4rmors5terons5te_root5sterots5te_rpoort5jrsek5stersorkes5r4s5taakrst5aangr4st5redrte5nachrt4s5ecoruts5te_3s4co5reseks5tense4l3a4g4s3e4lekse4n3a4g4s5impers5ingeniskaart5j5s4loot3slui5ste3so5l4o32s1on4t3sraads5lstaart5jst5e4ros5sterrenstraat5jst5roos_taats5tatament5jte4l3o4g5tenten_teraads5te4r5aakte4r5enkte4r5envte4r5in_ter5ste_ter5stonthoof5ditmens5te5toe3l4atoemaat5to4r5olitors5te_t4s5tankt5s4tes_tte5l4optten4t5jtuurs5lauid5spreuid5ste_uin4s5louits5te_urs5takevals5tekve4l3a4gvens5lanvens5tekven4s3u4vors5te_vor5stenvrij5stewaar5stewer4k3u4wezen4s5winst5aawoor4d5rzoet5ste");
             put(9, "_acht5end_handels5_ker5sten_laat5ste_mor5sten_pers5te__pits5te__raads5le_spoor5tj_wals5te_asting5spboots5te_brie5tje_ebots5te_ekwet5steemor5stenepers5te_espit5steewens5te_flens5te_fpers5te_fpits5te_gfijn5stehaats5te_heers5takhielsges5hts5trekki5otorensjspoort5jkaart5jeskaats5te_ka4t5a4leketting5skinds5te_kkers5tenklots5te_koets5te_kwens5te_lands5te_loens5te_nbots5te_n4d5e4recngels5te_n5opleidinpers5te_ntene5tenomen5ste_poets5te_r4d5e4lasrke5streerke5strerrlaat5sterlinks5ter5treden_rvals5te_rvers5te_rwens5te_slens5te_5smuildenteeds5te_toets5te_udi5ologevens5taakvens5takewrens5te_zwets5te_");
     	}
-    }),
+    }),  
     PL(2, 2, new HashMap<Integer, String>() {
     	{
             put(2, "a1ą1e1ę1i1o1ó1u1y1");
@@ -279,6 +299,10 @@ public enum HyphenationPattern {
             put(20, "_gdzi2e1ni2e1gdzi2e1");
     	}
     }),
+    // For questions about the portuguese hyphenation patterns
+    // ask Lailson Bandeira (lailsonbm at gmail dot com)
+    // based on LaTeX patterns in Portuguese, by Pedro J. de Rezende and 
+    // J.Joao Dias Almeida (http://www.ctan.org/tex-archive/language/hyph-utf8/tex/generic/hyph-utf8/patterns/)
     PT(2, 4, new HashMap<Integer, String>() {
     	{
             put(2, "1-");
@@ -287,6 +311,8 @@ public enum HyphenationPattern {
             put(5, "1gu4a1gu4e1gu4i1gu4o1qu4a1qu4e1qu4i1qu4o");
     	}
     }),
+    // For questions about the romanian hyphenation patterns
+    // ask irragal at gmail dot com
     RO(2, 3, new HashMap<Integer, String>() {
     	{
             put(2, "1k1ț1b1c1d1zî21ja11l1m1x1v1s2ș");
@@ -298,6 +324,8 @@ public enum HyphenationPattern {
             put(8, "copia2tăteri6alăimateri6rografi6vorbito2omedi2e_");
     	}
     }),
+    // For questions about the russian hyphenation patterns ask
+    // crymos at yandex dot ru
     RU(2, 2, new HashMap<Integer, String>() {
     	{
             put(2, "1г1ж1м1п1ф1ц1ш1щъ1ы1ь11э1ю");
@@ -311,6 +339,9 @@ public enum HyphenationPattern {
             put(10, "но4л1а2мин");
     	}
     }),
+    // Created based on sk-spell.sk.cx
+    // For questions about the slovak hyphenation patterns
+    // ask Zdenko Podobný (zdenop at gmail dot com)
     SK(2, 2, new HashMap<Integer, String>() {
     	{
             put(2, "a1á1ä1e1é1i1í1o1ó1ô1u1ú1y1ý1");
@@ -328,6 +359,8 @@ public enum HyphenationPattern {
             put(15, "ôs4t3k2ár3s4t4v_po6s4t5s4k4rip5boh3vi4e3o2d3k");
     	}
     }),
+    // For questions about the Slovenian hyphenation patterns
+    // ask Mojca Miklavec (mojca dot miklavec dot lists at gmail dot com)
     SL(2, 2, new HashMap<Integer, String>() {
     	{
             put(3, "_č8_š8_ž81fa1hu1kn1sc1sp1wa1ye1zi1zn1zo1zu1čj1čl2cc2ck2ew2ft2jh2nč2vč8č_8š_8ž_a1aa1ba1ca1da1fa1ga1ha1ia1ja1ka1la1ma1na1oa1pa1sa1ta1va1ča1ša1žb1hb1mb1zb1žbe1bi1bo1d2ed2oe1ae1be1ce1de1ee1fe1ge1he1ie1je1ke1le1me1ne1pe1se1te1ve1ze1če1še1žfe1fu1go1gu1i1ai1bi1ci1di1fi1gi1hi1ii1ji1ki1li1mi1ni1pi1ri1si1ti1ui1vi1xi1zi1ši1žju1ki1ko1le1lo1na1ne1nu1o1ao1bo1co1do1eo1fo1go1ho1io1jo1ko1lo1mo1no1oo1po1so1to1uo1vo1yo1zo1čo1šo1žpe1po1qu2r1fr1rr1žre1ri1ro1si1su1t1ftu1u1bu1cu1du1eu1fu1gu1hu1iu1ju1lu1mu1nu1pu1su1tu1vu1zu1ču1šu1žv1fv1gvz2wo2x1fy1jy1ly1wz1cz1gz1tz1šz1žči1š2č");
@@ -338,6 +371,8 @@ public enum HyphenationPattern {
             put(8, "_pre6d7ne4z5u4m5");
     	}
     }),
+    // Swedish hyphenation patterns by Jan Michael Rynning, jmr@nada.kth.se
+    // Patterns modified for Hyphenator by Andreas Johansson, andreas@ibuypink.com
     SV(2, 2, new HashMap<Integer, String>() {
     	{
             put(2, "c21df21hx12y");
@@ -350,6 +385,8 @@ public enum HyphenationPattern {
             put(9, "_ma5skeri_pub3likad5rasseragi5st4rat");
     	}
     }),
+    // For questions about the Tamil hyphenation patterns
+    // ask Santhosh Thottingal (santhosh dot thottingal at gmail dot com)
     TA(2, 2, new HashMap<Integer, String>() {
     	{
     		put(2, "ா1ி1ீ1ு1ூ1ெ1ே1ை1ொ1ோ1ௌ11க1ங1ச1ஜ1ஞ1ட1ண1த1ந1ப1ம1ய1ர1ற1ல1ள1ழ1வ1ஷ1ஸ1ஹ");
@@ -357,11 +394,8 @@ public enum HyphenationPattern {
     		put(4, "2க்12ங்12ச்12ஞ்12ட்12ண்12த்12ன்12ந்12ப்12ம்12ய்12ர்12ற்12ல்12ள்12ழ்12வ்12ஷ்12ஸ்12ஹ்1");
     	}
     }),
-    TE(2, 2, new HashMap<Integer, String>() {
-    	{
-    		put(2, "అ1ఆ1ఇ1ఈ1ఉ1ఊ1ఋ1ఎ1ఏ1ఐ1ఒ1ఔ1ి1ా1ీ1ు1ూ1ృ1ె1ే1ొ1ో1ౌ1్2ః1ం11క1గ1ఖ1ఘ1ఙ1చ1ఛ1జ1ఝ1ఞ1ట1ఠ1డ1ఢ1ణ1త1థ1ద1ధ1న1ప1ఫ1బ1భ1మ1య1ర1ల1వ1శ1ష1స1హ1ళ1ఱ");
-    	}
-    }),
+    // For questions about the turkish hyphenation patterns ask
+    // Andreas Lappe nd at off-pist dot de
     TR(2, 2, new HashMap<Integer, String>() {
     	{
     		put(3, "2a12â12e12ı12i12î12o12ö12u12ü12û11b11c11ç11d11f11g11ğ11h11j11k11l11m11n11p11r11s11ş11t11v11y11z12bb2bc2bç2bd2bf2bg2bğ2bh2bj2bk2bl2bm2bn2bp2br2bs2bş2bt2bv2by2bz2cb2cc2cç2cd2cf2cg2cğ2ch2cj2ck2cl2cm2cn2cp2cr2cs2cş2ct2cv2cy2cz2çb2çc2çç2çd2çf2çg2çğ2çh2çj2çk2çl2çm2çn2çp2çr2çs2çş2çt2çv2çy2çz2db2dc2dç2dd2df2dg2dğ2dh2dj2dk2dl2dm2dn2dp2dr2ds2dş2dt2dv2dy2dz2fb2fc2fç2fd2ff2fg2fğ2fh2fj2fk2fl2fm2fn2fp2fr2fs2fş2ft2fv2fy2fz2gb2gc2gç2gd2gf2gg2gğ2gh2gj2gk2gl2gm2gn2gp2gr2gs2gş2gt2gv2gy2gz2ğb2ğc2ğç2ğd2ğf2ğg2ğğ2ğh2ğj2ğk2ğl2ğm2ğn2ğp2ğr2ğs2ğş2ğt2ğv2ğy2ğz2hb2hc2hç2hd2hf2hg2hğ2hh2hj2hk2hl2hm2hn2hp2hr2hs2hş2ht2hv2hy2hz2jb2jc2jç2jd2jf2jg2jğ2jh2jj2jk2jl2jm2jn2jp2jr2js2jş2jt2jv2jy2jz2kb2kc2kç2kd2kf2kg2kğ2kh2kj2kk2kl2km2kn2kp2kr2ks2kş2kt2kv2ky2kz2lb2lc2lç2ld2lf2lg2lğ2lh2lj2lk2ll2lm2ln2lp2lr2ls2lş2lt2lv2ly2lz2mb2mc2mç2md2mf2mg2mğ2mh2mj2mk2ml2mm2mn2mp2mr2ms2mş2mt2mv2my2mz2nb2nc2nç2nd2nf2ng2nğ2nh2nj2nk2nl2nm2nn2np2nr2ns2nş2nt2nv2ny2nz2pb2pc2pç2pd2pf2pg2pğ2ph2pj2pk2pl2pm2pn2pp2pr2ps2pş2pt2pv2py2pz2rb2rc2rç2rd2rf2rg2rğ2rh2rj2rk2rl2rm2rn2rp2rr2rs2rş2rt2rv2ry2rz2sb2sc2sç2sd2sf2sg2sğ2sh2sj2sk2sl2sm2sn2sp2sr2ss2sş2st2sv2sy2sz2şb2şc2şç2şd2şf2şg2şğ2şh2şj2şk2şl2şm2şn2şp2şr2şs2şş2şt2şv2şy2şz2tb2tc2tç2td2tf2tg2tğ2th2tj2tk2tl2tm2tn2tp2tr2ts2tş2tt2tv2ty2tz2vb2vc2vç2vd2vf2vg2vğ2vh2vj2vk2vl2vm2vn2vp2vr2vs2vş2vt2vv2vy2vz2yb2yc2yç2yd2yf2yg2yğ2yh2yj2yk2yl2ym2yn2yp2yr2ys2yş2yt2yv2yy2yz2zb2zc2zç2zd2zf2zg2zğ2zh2zj2zk2zl2zm2zn2zp2zr2zs2zş2zt2zv2zy2zz");
@@ -370,6 +404,8 @@ public enum HyphenationPattern {
             put(7, "2e2cek_m1t4rak");
     	}
     }),
+    // For questions about the Ukrainian hyphenation patterns
+    // ask Alexey Grekov (athens at ukr dot net)
     UK(2, 2, new HashMap<Integer, String>() {
     	{
             put(2, "6’6ь");
