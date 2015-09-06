@@ -82,6 +82,11 @@ public class Hyphenator implements Serializable {
                         if (digitStart < 0) {
                             digitStart = p;
                         }
+                        if(p == pattern.length()-1) {
+                            // last number in the pattern
+                            String number = pattern.substring(digitStart, pattern.length());
+                            list.add(Integer.valueOf(number));
+                        }
                     } else if (digitStart >= 0) {
                         String number = pattern.substring(digitStart, p);
                         list.add(Integer.valueOf(number));
